@@ -1,0 +1,15 @@
+//program to print stairs made up of 0s and 1s
+#include<stdio.h>
+int main()
+{
+  int i=1,s=1;
+  for(s=1;s<7;s++)
+  {
+    for(i=0;i<s+1;i++)
+    {
+      printf("01");
+    }
+  }
+return 0;
+}
+  

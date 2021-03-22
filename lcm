@@ -1,0 +1,30 @@
+//program in C to find the LCM of two numbers using recursion
+#include<stdio.h>
+int gcd(int n1,int n2);
+int main()
+{
+    int n1,n2,ln,b,s;
+    printf("Enter two numbers :");
+    scanf("%d %d",&n1,&n2);
+    if(n1!=n2)
+    {
+        ln=(n1*n2)/gcd(n1,n2);
+        printf("LCM of the numbers Entered is %d",ln);
+    }
+    else
+    {
+        printf("Same number Entered Twice.");
+    }
+    return 0;
+}
+int gcd(int n1,int n2)
+{
+    if (n2==0) 
+    {
+        return n1; 
+    }
+    else 
+    {
+        return gcd(n2,n1%n2); 
+    }
+}

@@ -1,0 +1,28 @@
+//Write a C program that defines a structure employee containing the details such as empno, empname, department name and salary. The structure has to store 20 employees in an organization.
+#include<stdio.h>
+void pr(int i);
+struct Employee
+{
+    char empname[25], deptn[25]; 
+    int empno,salary;
+}emp[20];
+
+int main() 
+{
+    printf("Enter details of employees sequentialy.(Name, Emp. no, Dept name, Salary)"); 
+    for(int i=0;i<5;i++)
+    {
+        printf("\nFor Employee number %d :",i+1);
+        scanf("%s,%d,%s,%d",&emp[i].empname,&emp[i].empno,&emp[i].deptn,&emp[i].salary); 
+        
+    }
+    for(int i=0;i<20;i++) 
+    {
+        pr(i);
+    }
+}
+void pr( int i)
+{
+    printf("\nFor Employee %d",i+1);
+    printf("Name-%s\nEmp no.-%d\nDepartment name-%s\nSalary-%d",emp[i].empname,emp[i].empno,emp[i].deptn,emp[i].salary); 
+}

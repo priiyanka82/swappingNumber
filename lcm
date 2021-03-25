@@ -4,12 +4,14 @@ int gcd(int n1,int n2);
 int main()
 {
     int n1,n2,ln,b,s;
-    printf("Enter two numbers :");
-    scanf("%d %d",&n1,&n2);
+    printf("Input First Number :");
+    scanf("%d",&n1);
+    printf("\nEnter Second Number :");
+    scanf("%d",&n2);
     if(n1!=n2)
     {
         ln=(n1*n2)/gcd(n1,n2);
-        printf("LCM of the numbers Entered is %d",ln);
+        printf("LCM of%d and %d is %d",n1,n2,ln);
     }
     else
     {
